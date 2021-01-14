@@ -1,0 +1,28 @@
+schema {
+    query: Query
+}
+
+type Query {
+    file: [File]!
+    project: [Project]!
+    person: [Person]!
+    personByName(name: String): Person!
+}
+
+type File {
+    bizUUID: ID!
+    name: String!
+}
+
+type Project {
+    bizUUID: ID!
+    name: String!
+    owner: Person!
+    files: [File]!
+}
+
+type Person {
+    bizUUID: ID!
+    name: String!
+    projects: [Project]!
+}

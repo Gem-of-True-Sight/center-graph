@@ -1,0 +1,9 @@
+spring:
+  neo4j:
+    uri: bolt://192.168.11.169:7687
+    authentication:
+      username: neo4j
+      password: neo4j123
+
+logging:
+  config: classpath:log4j2.yml
