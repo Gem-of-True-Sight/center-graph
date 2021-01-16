@@ -5,11 +5,13 @@ import com.gots.cg.graphql.mappers.MovieGOMapper;
 import com.gots.cg.graphql.model.N_MovieGO;
 import com.gots.cg.service.neo4j.repositories.IMovieRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j(topic = "gots")
 @Component
 @RequiredArgsConstructor
 public class MovieQueryResolverImpl implements MovieQueryResolver {

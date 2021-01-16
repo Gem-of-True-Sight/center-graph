@@ -3,3 +3,10 @@ spring:
     active: service,web
 logging:
   config: classpath:log4j2.yml
+  level:
+    cn.jay.repository: trace
+    org.neo4j.driver.GraphDatabase: debug
+    org.neo4j.driver.Driver: debug
+    org.neo4j.driver.OutboundMessageHandler: debug
+    org.neo4j.driver.InboundMessageDispatcher : debug
+    org.springframework.data.neo4j: debug

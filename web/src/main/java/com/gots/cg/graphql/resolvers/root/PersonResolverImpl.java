@@ -6,11 +6,13 @@ import com.gots.cg.graphql.mappers.PersonGOMapper;
 import com.gots.cg.graphql.model.N_PersonGO;
 import com.gots.cg.service.neo4j.repositories.IPersonRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j(topic = "gots")
 @Component
 @RequiredArgsConstructor
 public class PersonResolverImpl

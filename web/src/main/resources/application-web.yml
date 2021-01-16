@@ -7,6 +7,3 @@ graphql:
   servlet:
     mapping: /graphql
     exception-handlers-enabled: true
-
-logging:
-  config: classpath:log4j2.yml
