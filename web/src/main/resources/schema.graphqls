@@ -3,26 +3,33 @@ schema {
 }
 
 type Query {
-    file: [File]!
-    project: [Project]!
-    person: [Person]!
-    personByName(name: String): Person!
+    movie: [N_Movie]
+    person: [N_Person]
+    personByName(name: String): N_Person
 }
 
-type File {
-    bizUUID: ID!
-    name: String!
+type N_Movie {
+    tagline: String
+    title: String
+    released: Int
 }
 
-type Project {
-    bizUUID: ID!
-    name: String!
-    owner: Person!
-    files: [File]!
+
+type N_Person {
+    name: String
+    born: Int
+    actedIn: [N_Movie]
+    reviewed: [N_Movie]
+    produced: [N_Movie]
+    wrote: [N_Movie]
+    directed: [N_Movie]
+    follows: [N_Person]
+    beFollows: [N_Person]
 }
 
-type Person {
-    bizUUID: ID!
-    name: String!
-    projects: [Project]!
+type E_ActedIn {
+    edges: [String]
+    target: N_Movie
 }
+
+scalar DateTime

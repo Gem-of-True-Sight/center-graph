@@ -35,7 +35,7 @@ Configuration:
 
   Loggers:
     Root:
-      level: warn
+      level: debug
       AppenderRef:
         - ref: CONSOLE
     #        - ref: ROLLING_FILE

@@ -1,7 +1,8 @@
 package com.gots.cg.controller;
 
-import com.gots.cg.beans.schema.node.NFile;
-import com.gots.cg.service.neo4j.repositories.IFileRepository;
+import com.gots.cg.beans.schema.node.N_Movie;
+import com.gots.cg.service.neo4j.repositories.IMovieRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,17 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("/files")
+@RequiredArgsConstructor
 public class FileController {
 
-    private final IFileRepository iFileRepository;
-
-    public FileController(IFileRepository iFileRepository) {
-        this.iFileRepository = iFileRepository;
-    }
+    private final IMovieRepository iMovieRepository;
 
     @GetMapping
-    public Iterable<NFile> findAll() {
-        return iFileRepository.findAll();
+    public Iterable<N_Movie> findAll() {
+        return iMovieRepository.findAll();
     }
 
 }
