@@ -2,6 +2,7 @@ package com.gots.cg.beans.schema.node;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Property;
 
@@ -9,6 +10,7 @@ import org.springframework.data.neo4j.core.schema.Property;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class N_Person extends N_AbstractNode {
+
     @Property
     private String name;
 
